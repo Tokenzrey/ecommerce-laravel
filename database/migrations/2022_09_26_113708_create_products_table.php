@@ -22,6 +22,7 @@ return new class extends Migration
                 $table->text('long_description');
                 $table->foreignId('category_id')->constrained('product_categories')->onUpdate('cascade')->onDelete('cascade');;
                 $table->boolean('is_variable')->default(0);
+                $table->integer('inventory_count')->default(0);
                 $table->boolean('is_grouped')->default(0);
                 $table->boolean('is_simple')->default(1);
                 $table->boolean('is_featured')->default(0);
